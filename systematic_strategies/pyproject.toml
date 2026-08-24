@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "systematic-strategies"
+version = "1.0.0"
+description = "Quantitative Systematic Trading Strategies (11-15): Mean Reversion, Momentum, Statistical Arbitrage / Pairs Trading, Factor Long/Short, and Multi-Asset Trend-Following."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Quant Engineer", email = "quant@example.com" }
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
