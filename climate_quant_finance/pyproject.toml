@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "climate-quant-finance"
+version = "1.0.0"
+description = "Climate Quantitative Finance & Carbon Markets (36-40): Carbon Allowance Pricing & ETS Switching, Green Bond Greenium Valuation, NGFS Climate Scenario Stress Testing, Geospatial GHG Plume Alpha, and Renewable PPA / Weather Derivatives."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Quant Engineer", email = "quant@example.com" }
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
