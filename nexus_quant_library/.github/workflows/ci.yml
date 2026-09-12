@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install .[all,dev]
+    - name: Run Test Suite
+      run: |
+        python -m unittest discover -s tests -p "test_*.py"
+    - name: Run Examples Verification
+      run: |
+        python examples/01_hedge_fund_multi_asset.py
+        python examples/02_hft_market_maker.py
+        python examples/03_crypto_defi_arbitrage.py
+        python examples/04_macro_alt_data_nlp.py
+        python examples/05_climate_carbon_esg.py

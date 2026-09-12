@@ -1,0 +1,34 @@
+site_name: Nexus Quant Platform Documentation
+site_description: Enterprise-Grade Cross-Asset Quantitative Finance, DeFi, HFT Microstructure, AI & Climate Risk Library
+site_url: https://docs.nexusquant.io
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: amber
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Modules:
+    - 01. Foundations & Volatility: modules/foundations.md
+    - 02. Risk & Climate VaR: modules/risk.md
+    - 03. Systematic Strategies: modules/strategies.md
+    - 04. Derivatives & RND: modules/derivatives.md
+    - 05. Macro & Fixed Income: modules/macro.md
+    - 06. Microstructure & HFT: modules/microstructure.md
+    - 07. AI & Alternative Data: modules/ai.md
+    - 08. DeFi & Prediction Markets: modules/defi.md
+    - 09. Portfolio Optimization: modules/portfolio.md
+    - 10. Statistical Rigor: modules/rigor.md
+    - 11. Master Orchestrator: modules/orchestrator.md
+  - Quickstart Recipes:
+    - Hedge Funds: recipes/hedge_fund.md
+    - HFT & Market Making: recipes/hft.md
+    - DeFi & Crypto: recipes/defi.md
+    - Macro & ESG: recipes/macro_esg.md

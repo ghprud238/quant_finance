@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: nexus-quant
+Version: 1.0.0
+Summary: Institutional-Grade Cross-Asset Quantitative Finance, DeFi, High-Frequency Microstructure, AI & Climate Risk Library
+Author-email: Nexus Quant Core Engineering Group <quant-core@nexusquant.io>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/nexus-quant/nexus-quant
+Project-URL: Documentation, https://docs.nexusquant.io
+Project-URL: Repository, https://github.com/nexus-quant/nexus-quant.git
+Project-URL: Bug Tracker, https://github.com/nexus-quant/nexus-quant/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.23.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: scipy>=1.9.0
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: seaborn>=0.12.0
+Provides-Extra: all
+Requires-Dist: scikit-learn>=1.2.0; extra == "all"
+Requires-Dist: statsmodels>=0.13.0; extra == "all"
+Requires-Dist: torch>=2.0.0; extra == "all"
+Requires-Dist: tabulate>=0.9.0; extra == "all"
+Requires-Dist: pydantic>=2.0.0; extra == "all"
+Provides-Extra: hft
+Requires-Dist: numba>=0.56.0; extra == "hft"
+Provides-Extra: defi
+Requires-Dist: web3>=6.0.0; extra == "defi"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.2.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.0.260; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: mkdocs>=1.4.0; extra == "dev"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "dev"
